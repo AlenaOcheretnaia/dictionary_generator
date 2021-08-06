@@ -11,8 +11,7 @@ public class Main {
 
         // Объявляем "функцию", присваиваем ее переменной myDictionary.
         Function<String, List<String>> myDictionary = message1 -> Stream.of(message1.split(" "))
-                .map (elem -> new String(elem))
-                .sorted(Comparator.comparing(n->n.toString().toUpperCase()))
+                .sorted(Comparator.comparing(n->n.toUpperCase()))
                 .peek(System.out::println)
                 .collect(Collectors.toList());
 
